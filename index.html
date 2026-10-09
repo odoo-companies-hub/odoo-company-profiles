@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odoo Company Profiles — Names, Contacts &amp; Addresses</title>
+<meta name="description" content="Browse 464 official Odoo implementation companies worldwide with contact email, phone number, address, and certification tier.">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%225%22 fill=%22%2335d0ba%22/><text x=%2212%22 y=%2217%22 font-size=%2214%22 text-anchor=%22middle%22 fill=%22%23061018%22 font-family=%22sans-serif%22 font-weight=%22bold%22>O</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">Odoo Company <span>Profiles</span></a>
+  <div class="links">
+    <a href="index.html" class="active">Directory</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Odoo Company Profiles</h1>
+  <p class="lead">A directory of official Odoo implementation companies — company name, contact email, phone number, address, and certification tier, with a short profile for each.</p>
+  <div class="hero-stats" id="hero-stats"></div>
+</header>
+
+<div class="note-box">
+  <div class="inner">
+    Contact details and addresses shown here are pulled directly from each company's own public profile on Odoo's official partner directory — none are invented. These are each company's general published contact, not necessarily a specific department. "Apply on company site" opens that company's official website in a popup window — we don't host or collect applications ourselves.
+  </div>
+</div>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Search by company name…">
+  <select id="country-filter">
+    <option value="">All countries</option>
+  </select>
+  <select id="tier-filter">
+    <option value="">All tiers</option>
+    <option value="Gold">Gold</option>
+    <option value="Silver">Silver</option>
+    <option value="Ready">Ready</option>
+  </select>
+</div>
+
+<div id="results-meta"></div>
+<div class="grid" id="grid"></div>
+<p id="empty" hidden>No companies match your search.</p>
+<div id="pager"></div>
+
+<div class="modal-backdrop" id="modal-backdrop" hidden>
+  <div class="modal" id="modal-body"></div>
+</div>
+
+<footer class="site-footer">
+  <p>Odoo Company Profiles is an independent, unofficial directory. Not affiliated with or endorsed by Odoo S.A. "Odoo" is a trademark of Odoo S.A.</p>
+  <p><a href="about.html">About</a> · <a href="contact.html">Contact</a></p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

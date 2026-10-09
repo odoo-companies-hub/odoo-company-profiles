@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Odoo Company Profiles</title>
+<meta name="description" content="Report a listing error, request a correction, or get in touch with Odoo Company Profiles.">
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="brand" href="index.html">Odoo Company <span>Profiles</span></a>
+  <div class="links">
+    <a href="index.html">Directory</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<div class="page-body">
+  <h1>Contact Us</h1>
+  <p>
+    Spotted an outdated phone number, email, or address? Want a listing
+    corrected or removed? Send us a note and we'll update it.
+  </p>
+
+  <form class="contact-form" action="mailto:asappssupport@gmail.com" method="post" enctype="text/plain">
+    <div>
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Your email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+      <label for="company">Company name (if reporting a listing)</label>
+      <input type="text" id="company" name="company">
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+
+  <p>Or email us directly at <a href="mailto:asappssupport@gmail.com">asappssupport@gmail.com</a>.</p>
+</div>
+
+<footer class="site-footer">
+  <p>Odoo Company Profiles is an independent, unofficial directory. Not affiliated with or endorsed by Odoo S.A.</p>
+  <p><a href="index.html">Directory</a> · <a href="about.html">About</a></p>
+</footer>
+
+</body>
+</html>

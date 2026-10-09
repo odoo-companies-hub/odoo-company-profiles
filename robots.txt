@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://odoo-companies-hub.github.io/odoo-company-profiles/sitemap.xml
