@@ -117,9 +117,9 @@
     );
   }
 
-  function cardHtml(c, idx) {
+  function cardHtml(c, idx, hidden) {
     return `
-      <div class="card">
+      <div class="card"${hidden ? " hidden" : ""}>
         <span class="badge ${c.tier}">${esc(c.tier)} Tier</span>
         <h3>${esc(c.name)}</h3>
         <div class="country">${FLAGS[c.country] || ""} ${esc(c.country)}</div>
@@ -147,9 +147,14 @@
     const totalPages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
     if (page > totalPages) page = totalPages;
     const start = (page - 1) * PAGE_SIZE;
-    const pageItems = results.slice(start, start + PAGE_SIZE);
+    const end = start + PAGE_SIZE;
 
-    grid.innerHTML = pageItems.map(c => cardHtml(c, PARTNERS.indexOf(c))).join("");
+    // Every matching company is kept in the DOM (just hidden outside the
+    // current page) rather than sliced out — so search engines crawling the
+    // rendered page see the full directory, not only the visible 24-at-a-time.
+    grid.innerHTML = results
+      .map((c, i) => cardHtml(c, PARTNERS.indexOf(c), i < start || i >= end))
+      .join("");
     empty.hidden = results.length !== 0;
     meta.textContent = `Showing ${results.length} of ${PARTNERS.length} companies` +
       (totalPages > 1 ? ` — page ${page} of ${totalPages}` : "");
