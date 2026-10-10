@@ -244,6 +244,14 @@ a:hover { text-decoration: underline; }
 }
 .site-footer a { color: var(--text-dim); }
 
+.ad-slot {
+  max-width: var(--max-w);
+  margin: 20px auto;
+  padding: 0 20px;
+  min-height: 0;
+  text-align: center;
+}
+
 .note-box {
   max-width: var(--max-w);
   margin: 0 auto 20px;
